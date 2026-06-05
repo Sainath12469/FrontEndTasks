@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - EduHub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-graduation-cap"></i> EduHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-primary ms-2" href="registration.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Title -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h1 class="fw-bold mb-2">Our Courses</h1>
+            <p class="text-muted">Explore all available courses and choose the one that fits your career goals</p>
+        </div>
+    </section>
+
+    <!-- Courses Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Course 1: Web Development -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm course-card">
+                        <img src="https://via.placeholder.com/300x200?text=Web+Development" class="card-img-top" alt="Web Development">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text text-muted">Learn HTML, CSS, JavaScript, React, and modern web frameworks to build responsive and interactive web applications.</p>
+                            <div class="course-details mb-3">
+                                <p class="mb-1"><i class="fas fa-clock text-primary"></i> <strong>Duration:</strong> 3 Months</p>
+                                <p class="mb-1"><i class="fas fa-indian-rupee-sign text-success"></i> <strong>Fee:</strong> ₹15,000</p>
+                                <p class="mb-1"><i class="fas fa-users text-info"></i> <strong>Level:</strong> Beginner to Advanced</p>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <a href="registration.html" class="btn btn-primary btn-sm">Enroll Now</a>
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#courseDetailModal" onclick="showCourseDetails('Web Development', 'Learn HTML, CSS, JavaScript, React, Node.js, and build full-stack applications. Includes real-world projects.', '3 Months', '₹15,000', '50+')">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 2: Python Programming -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm course-card">
+                        <img src="https://via.placeholder.com/300x200?text=Python+Programming" class="card-img-top" alt="Python Programming">
+                        <div class="card-body">
+                            <h5 class="card-title">Python Programming</h5>
+                            <p class="card-text text-muted">Master Python programming from basics to advanced concepts including OOP, file handling, and library usage.</p>
+                            <div class="course-details mb-3">
+                                <p class="mb-1"><i class="fas fa-clock text-primary"></i> <strong>Duration:</strong> 2.5 Months</p>
+                                <p class="mb-1"><i class="fas fa-indian-rupee-sign text-success"></i> <strong>Fee:</strong> ₹12,000</p>
+                                <p class="mb-1"><i class="fas fa-users text-info"></i> <strong>Level:</strong> Beginner to Intermediate</p>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <a href="registration.html" class="btn btn-primary btn-sm">Enroll Now</a>
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#courseDetailModal" onclick="showCourseDetails('Python Programming', 'Learn Python fundamentals, data structures, functions, OOP, and practical applications. Perfect for beginners.', '2.5 Months', '₹12,000', '45+')">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course 3: Data Science -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm course-card">
+                        <img src="https://via.placeholder.com/300x200?text=Data+Science" class="card-img-top" alt="Data Science">
+                        <div class="card-body">
+                            <h5 class="card-title">Data Science</h5>
+                            <p class="card-text text-muted">Analyze data, create visualizations, and build predictive models using Python, SQL, and machine learning.</p>
+                            <div class="course-details mb-3">
+                                <p class="mb-1"><i class="fas fa-clock text-primary"></i> <strong>Duration:</strong> 4 Months</p>
+                                <p class="mb-1"><i class="fas fa-indian-rupee-sign text-success"></i> <strong>Fee:</strong> ₹20,000</p>
+                                <p class="mb-1"><i class="fas fa-users text-info"></i> <strong>Level:</strong> Intermediate to Advanced</p>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <a href="registration.html" class="btn btn-primary btn-sm">Enroll Now</a>
+                                <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#courseDetailModal" onclick="showCourseDetails('Data Science', 'Learn data analysis, visualization, statistical modeling, and machine learning. Build real data science projects.', '4 Months', '₹20,000', '35+')">Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </section>
+
+  
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">EduHub</h5>
+                    <p class="text-muted">Empowering students through quality education and training</p>
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-muted text-decoration-none">Home</a></li>
+                        <li><a href="courses.html" class="text-muted text-decoration-none">Courses</a></li>
+                        <li><a href="about.html" class="text-muted text-decoration-none">About</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Contact Info</h5>
+                    <p class="text-muted mb-2"><i class="fas fa-map-marker-alt"></i> 123 Education St, Tech City, TC 12345</p>
+                    <p class="text-muted mb-2"><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    <p class="text-muted"><i class="fas fa-envelope"></i> info@eduhub.com</p>
+                </div>
+            </div>
+            <hr class="bg-secondary">
+            <div class="text-center text-muted">
+                <p>&copy; 2024 EduHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Course Detail Modal -->
+    <div class="modal fade" id="courseDetailModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="courseDetailTitle">Course Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="courseDetailDescription" class="mb-3"></p>
+                    <p><strong>Duration:</strong> <span id="courseDetailDuration"></span></p>
+                    <p><strong>Fee:</strong> <span id="courseDetailFee"></span></p>
+                    <p><strong>Modules:</strong> <span id="courseDetailModules"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a href="registration.html" class="btn btn-primary">Enroll Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+</html>
