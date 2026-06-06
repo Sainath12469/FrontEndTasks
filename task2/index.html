@@ -7,6 +7,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
+    <style>
+        .course-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid #000000;
+             border-radius: 0.375rem ;
+        }
+        .course-card:hover {
+            transform: translateY(-10px);
+            border-color: #000000;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.7);    
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -60,7 +72,8 @@
             <div class="row g-4">
                 <!-- Course 1 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm course-card">
+                    <div class="card h-100 ">
+                        <div class="course-card">
                         <img src="image.png" class="card-img-top" alt="Web Development">
                         <div class="card-body">
                             <h5 class="card-title">Web Development</h5>
@@ -69,12 +82,14 @@
                             <p class="mb-3"><strong>Fee:</strong> ₹15,000</p>
                             <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#courseModal" onclick="setCourseDetails('Web Development', '3 Months', '₹15,000')">View Details</button>
                         </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Course 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm course-card">
+                    <div class="card h-100 ">
+                        <div class="course-card">
                         <img src="image.png" class="card-img-top" alt="Python Programming">
                         <div class="card-body">
                             <h5 class="card-title">Python Programming</h5>
@@ -83,12 +98,14 @@
                             <p class="mb-3"><strong>Fee:</strong> ₹12,000</p>
                             <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#courseModal" onclick="setCourseDetails('Python Programming', '2.5 Months', '₹12,000')">View Details</button>
                         </div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Course 3 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="card h-100 shadow-sm course-card">
+                    <div class="card h-100 ">
+                        <div class="course-card">
                         <img src="image.png" class="card-img-top" alt="Data Science">
                         <div class="card-body">
                             <h5 class="card-title">Data Science</h5>
@@ -96,6 +113,7 @@
                             <p class="mb-1"><strong>Duration:</strong> 4 Months</p>
                             <p class="mb-3"><strong>Fee:</strong> ₹20,000</p>
                             <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#courseModal" onclick="setCourseDetails('Data Science', '4 Months', '₹20,000')">View Details</button>
+                        </div>
                         </div>
                     </div>
                 </div>
